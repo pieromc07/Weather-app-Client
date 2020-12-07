@@ -1,0 +1,161 @@
+
+.wrapper{
+    background-color:  #1E213A;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    transition: width .5s ease;
+}
+
+.wrapper .background-cloud{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 40px;
+    left: 0;
+}
+
+.wrapper .background-cloud img{
+    width: 100%;
+    height: 90%;
+    opacity: .08;
+   
+}
+
+.wrapper .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding: 12px 15px;
+
+}
+
+.wrapper .header .search{
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #6E707A;
+    cursor: pointer;
+}
+
+.wrapper .header .location{
+    background: #6E707A;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .outstanding{
+    text-align: center;
+    height: 90%;
+    position: relative;
+    color: #ffffff;
+}
+
+.wrapper .outstanding .weather{
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    padding-top: 30px ;
+}
+
+.wrapper .outstanding .weather img{
+    width: 8em;
+}
+
+.wrapper .outstanding .temperature{
+    display: block;
+    font-size: 90px;
+    font-weight: 400;    
+}
+
+.wrapper .outstanding .temperature .centigrade{
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(160, 159, 177);
+}
+
+.wrapper .outstanding .status-weather{
+
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 17px;
+    color: rgb(160, 159, 177);
+}
+
+.wrapper .outstanding .date{
+
+    width: 180px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-size: 500;
+    color: rgb(160, 159, 177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .outstanding .map{
+    width: 120px;
+    margin: 20px auto 50px auto;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(160, 159, 177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px){
+    .wrapper .outstanding .weather{
+        height: 260px;
+        padding-top: 60px;
+    }
+    .wrapper .outstanding .weather img{
+        width: 10em;
+    }
+    .wrapper .outstanding .temperature{
+        display: block;
+        font-size: 90px;
+        font-weight: 400;   
+        margin-top: 50px; 
+    }
+    .wrapper .outstanding .temperature{
+        font-size: 130px;
+    }
+    .wrapper .outstanding .temperature .centigrade{
+        font-size: 50px;
+    }
+    .wrapper .outstanding .status-weather{
+
+        font-size: 26px;
+        margin-top: 18px;
+        margin-bottom: 20px;
+    }
+    .wrapper .outstanding .map{
+        margin: 50px auto;
+    }
+}
+
+@media screen and (min-width: 850px){
+
+    .wrapper{
+        width: 100%;
+    }
+    .wrapper .outstanding .weather{
+        height: 200px;
+        padding-top: 50px;
+    }
+    .wrapper .outstanding .temperature{
+        font-size: 100px;
+    }
+}

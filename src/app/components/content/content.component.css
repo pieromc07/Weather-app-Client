@@ -1,0 +1,215 @@
+.wrapper{
+    background-color: #100E1D;
+    padding: 0px 20px;
+    color: #6E707A;;
+}
+.wrapper .header{
+    width: 100%;
+    padding: 12px 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.wrapper .header a{
+    text-decoration: none;
+    background-color: #6E707A;
+    border-radius: 100px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .header a.celcius{
+    margin-right: 20px ;
+}
+.wrapper .header a.active{
+    background-color: #ffffff;
+    color: #333333;
+}
+.wrapper .container-cards{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto 0px auto;  
+}
+.wrapper .container-cards .card{
+    background-color:#1E213A;
+    width: 140px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px 30px 0px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+.wrapper .container-cards .card .title{
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 10px 0px 10px;
+}
+.wrapper .container-cards .card .weather-img{
+    display: block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.wrapper .container-cards .card .weather-img img{
+    width: 3rem;
+}
+
+.wrapper .container-cards .card .temperatures{
+    width: 80%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper .container-cards .card .temperatures p{
+    display: inline-block;
+}
+.wrapper .weather-details{
+    width: 100%;
+    max-width: 700px;
+    margin: 0px auto;
+}
+.wrapper .weather-details .title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.wrapper .weather-details .detail-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+.wrapper .weather-details .detail-card .card{
+    width: 300px;
+    height: 130px;
+    background-color: #1E213A;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.wrapper .weather-details .detail-card .card .title{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6E707A;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .weather-details .detail-card .card .body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+
+}
+.wrapper .weather-details .detail-card .card .body p{
+    font-size: 55px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.wrapper .weather-details .detail-card .card .body p span{
+    font-size: 20px;
+    font-weight: 400;
+    color: #6E707A;
+}
+.wrapper .weather-details .detail-card .card .footer{
+    width: 100%;
+    text-decoration: none;
+    color: #6E707A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 25px;
+}
+.wrapper .weather-details .detail-card .card .footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: #6E707A;
+    color: #ffffff;
+    border-radius: 100px;
+    margin-right: 8px;
+}
+.wrapper .weather-details .detail-card .card .footer span{
+    font-size: 12px;
+}
+.wrapper .weather-details .detail-card .card .footer .progress{
+    width: 70%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    margin: 8px auto auto;
+    position: relative;
+}
+.wrapper .weather-details .detail-card .card .footer .progress .measure{
+    position: absolute;
+    background-color: transparent;
+    top: -16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.wrapper .weather-details .detail-card .card .footer .progress .unit{
+    position: absolute;
+    width: 100%;
+    font-size: 3px;
+    color: #ffffff;
+    background-color: transparent;
+    justify-content: flex-end;
+    top: 5px;
+}
+.wrapper .weather-details .detail-card .card .footer .progress .bar{
+    position: absolute;
+    background-color:#FFEC65;
+    height: 100%;
+    width: 84%;
+    border-radius: 50px;
+}    
+    
+@media screen and (min-width: 850px){
+
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+    }
+    .wrapper .container-cards{
+
+        width: 100%;
+        max-width: 700px;
+    }
+    .wrapper .container-cards .card{
+        max-width: 220px;
+
+    }
+}
