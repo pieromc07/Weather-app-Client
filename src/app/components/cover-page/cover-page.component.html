@@ -1,24 +1,46 @@
 <div class="wrapper">
-   
+
+
+    <div id="search-content" class="search-content">
+        <div class="close"><i (click)="exit()" class="fas fa-times"></i></div>
+        <form action="" class="form-search">
+            <input type="text" name="location" id="location" [(ngModel)]="searchLocation.location" placeholder="search for location">
+            <button id="search" (click)="search()">Search</button>
+        </form>
+
+        <ul class="location-concurrent">
+            <li class="item">London<i class="fas fa-angle-right"></i></li>
+            <li class="item">Lisboa<i class="fas fa-angle-right"></i></li>
+            <li class="item">Bogota<i class="fas fa-angle-right"></i></li>
+            <li class="item">Lima<i class="fas fa-angle-right"></i></li>
+            <li class="item">Barcelona<i class="fas fa-angle-right"></i></li>
+        </ul>
+
+    </div>
+
+
+
     <div class="header">
-        <a  href="#" class="search">Search for place</a>
-        <a href="#" class="location" (click)="geolocation()">
+        <button type="button" class="search" (click)="open()">Search for place</button>
+        <button type="button" class="location" (click)="geolocation()">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z">
                 </path>
             </svg>
-        </a>
+        </button>
     </div>
 
-     <div class="background-cloud"><img src="assets/img/Cloud-background.png" alt=""></div>
+    <div class="background-cloud"><img src="assets/img/Cloud-background.png" alt=""></div>
     <div class="outstanding">
-       <div class="weather"><img src="assets/img/Shower.png" alt=""></div>
-       <h1 class="temperature">15<span class="centigrade">°C</span></h1>
-       <p class="status-weather">Shower</p>
-       <p class="date">  <span>Today</span><span>.</span><span>wed, 2 Dec</span> </p>
-       <p class="map"><i class="fas fa-map-marker-alt"></i>  <span>Pacasmayo</span> </p>
+        <div class="weather"><img src="assets/img/Shower.png" alt=""></div>
+        <h1 class="temperature">15<span class="centigrade">°C</span></h1>
+        <p class="status-weather">Shower</p>
+        <p class="date"> <span>Today</span><span>.</span><span>wed, 2 Dec</span> </p>
+        <p class="map"><i class="fas fa-map-marker-alt"></i> <span>Pacasmayo</span> </p>
     </div>
+
+    <!-- <button type="button" style="height: 50px; width: 130px;" (click)="search()"> click</button> -->
 
 </div>

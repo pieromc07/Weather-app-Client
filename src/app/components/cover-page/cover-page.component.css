@@ -1,27 +1,28 @@
-
+/* * Contenedor cover page */
 .wrapper{
     background-color:  #1E213A;
-    height: 100vh;
+    height: 100vh; 
     width: 100%;
     position: relative;
     transition: width .5s ease;
 }
 
+/* * fondo de nubes  */
 .wrapper .background-cloud{
     position: absolute;
     width: 100%;
     height: 50%;
-    top: 40px;
+    top: 25px;
     left: 0;
 }
 
 .wrapper .background-cloud img{
     width: 100%;
-    height: 90%;
-    opacity: .08;
-   
+    height: 100%;
+    opacity: .05;
 }
 
+/* * Header de button */
 .wrapper .header{
     display: flex;
     justify-content: space-between;
@@ -29,24 +30,28 @@
     width: 100%;
     height: 10%;
     padding: 12px 15px;
-
+    
 }
 
 .wrapper .header .search{
     text-decoration: none;
     padding: 8px 14px;
     font-size: 14px;
+    border: none;
     border-radius: 2px;
     color: #ffffff;
     background-color: #6E707A;
     cursor: pointer;
+   
 }
 
 .wrapper .header .location{
+    cursor: pointer;
     background: #6E707A;
     color: #ffffff;
     width: 30px;
     height: 30px;
+    border: none;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -55,26 +60,25 @@
 
 .wrapper .outstanding{
     text-align: center;
-    height: 90%;
     position: relative;
     color: #ffffff;
+    height: 90%;
 }
 
 .wrapper .outstanding .weather{
-    width: 200px;
-    height: 190px;
-    margin: 0px auto;
-    padding-top: 30px ;
 }
 
 .wrapper .outstanding .weather img{
-    width: 8em;
+    width: 9em;
+    height: 100%;
+    padding-top:1.8em;
 }
 
 .wrapper .outstanding .temperature{
     display: block;
     font-size: 90px;
     font-weight: 400;    
+    padding: 5px 10px;
 }
 
 .wrapper .outstanding .temperature .centigrade{
@@ -84,78 +88,141 @@
 }
 
 .wrapper .outstanding .status-weather{
-
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 600;
-    margin-top: 12px;
-    margin-bottom: 17px;
+    margin-top: .5em;
+    margin-bottom: .6em;
     color: rgb(160, 159, 177);
+
 }
 
 .wrapper .outstanding .date{
-
     width: 180px;
     margin: 0 auto;
-    font-size: 18px;
-    font-size: 500;
+    font-size: 20px;
+    font-size: 400;
     color: rgb(160, 159, 177);
     display: flex;
     justify-content: space-between;
     align-items: center;
+ 
 }
 
 .wrapper .outstanding .map{
     width: 120px;
-    margin: 20px auto 50px auto;
+    margin: 1em auto 50px auto;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: rgb(160, 159, 177);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (min-width: 600px){
-    .wrapper .outstanding .weather{
-        height: 260px;
-        padding-top: 60px;
-    }
-    .wrapper .outstanding .weather img{
-        width: 10em;
-    }
-    .wrapper .outstanding .temperature{
-        display: block;
-        font-size: 90px;
-        font-weight: 400;   
-        margin-top: 50px; 
-    }
-    .wrapper .outstanding .temperature{
-        font-size: 130px;
-    }
-    .wrapper .outstanding .temperature .centigrade{
-        font-size: 50px;
-    }
-    .wrapper .outstanding .status-weather{
 
-        font-size: 26px;
-        margin-top: 18px;
-        margin-bottom: 20px;
+.search-content{
+    width: 100%;
+    height: 100%;
+    background-color:  #1E213A;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    transition: all ease 1s;
+    padding: 20px;
+}
+.search-content.active{
+    visibility: visible;
+    animation: search 1s;
+}
+.search-content.exit{
+    visibility: hidden;
+    animation: exit 1s;
+}
+@keyframes search{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }100%{
+  
+        opacity: 1;
+        transform: translateX(0);
     }
-    .wrapper .outstanding .map{
-        margin: 50px auto;
-    }
+
 }
 
-@media screen and (min-width: 850px){
+@keyframes exit{
 
-    .wrapper{
-        width: 100%;
+    0%{
+        opacity: 1;
+        transform: translateX(0); 
+    }100%{
+  
+        opacity: 0;
+        transform: translateX(-400px);
     }
-    .wrapper .outstanding .weather{
-        height: 200px;
-        padding-top: 50px;
-    }
-    .wrapper .outstanding .temperature{
-        font-size: 100px;
-    }
+
+}
+.close{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    color: #6E707A;
+    margin-bottom: 20px;
+}
+.close i{
+    cursor: pointer;
+}
+.form-search{
+    height: 50px;
+    /* padding: 5px; */
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form-search #location{
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    padding: 5px;
+    width: 65%;
+    border: none;
+    border: 1px solid #6E707A;
+    border-radius: 3px;
+}
+
+.form-search #search{
+    margin-left: 10px;
+    background-color: #3C47E9;
+    color: white;
+    font-size: 16px;
+    width: 27%;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.location-concurrent{
+    padding: 5px;
+    margin-top: 10px;
+}
+.location-concurrent .item{
+    list-style: none;
+    padding: 15px 10px;
+    margin-bottom: 35px;
+    color: #6E707A;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    cursor: pointer;
+    /* transition: all .5s ease; */
+}
+.location-concurrent .item:hover{
+    border: 1px solid #6E707A;
+}
+.location-concurrent .item a{
+    text-decoration: none;
+    color: white;
 }

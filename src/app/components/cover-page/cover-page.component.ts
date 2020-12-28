@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class CoverPageComponent implements OnInit {
 
   Coord = {
-    log: "",
-    lat: ""
+    log: '',
+    lat: ''
   };
+
+  searchLocation = {
+
+    location: ''
+
+  }
 
   constructor() { }
 
@@ -18,17 +24,38 @@ export class CoverPageComponent implements OnInit {
     // this.geolocation()
   }
 
+
+
+  public search() {
+
+
+    alert(this.searchLocation.location)
+
+  }
+
+  public exit() {
+    const element = document.getElementById("search-content");
+    element?.classList.remove("active");
+    element?.classList.add("exit");
+  }
+  public open() {
+    const element = document.getElementById("search-content");
+    element?.classList.remove("exit");
+    element?.classList.add("active");
+
+
+  }
+
   public geolocation(): any {
     const location = navigator.geolocation
-
 
     const getLocation = (position: any) => {
       this.Coord.lat = position.coords.latitude;
       this.Coord.log = position.coords.longitude;
       console.log("lat: " + this.Coord.lat);
       console.log("log: " + this.Coord.log);
-      
-      
+
+
     }
 
     const err = (err: any) => {

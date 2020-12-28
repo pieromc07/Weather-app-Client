@@ -11,6 +11,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    opacity: 0;
+    transition: all .3s;
 }
 .wrapper .header a{
     text-decoration: none;
@@ -43,13 +45,14 @@
 }
 .wrapper .container-cards .card{
     background-color:#1E213A;
-    width: 140px;
+    width: 150px;
     height: 160px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px 0px 30px 0px;
     margin-bottom: 20px;
     border-radius: 3px;
+    margin: 0px auto 20px auto;
 }
 .wrapper .container-cards .card .title{
     display: block;
@@ -110,6 +113,8 @@
     flex-wrap: wrap;
     border-radius: 3px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .wrapper .weather-details .detail-card .card .title{
     width: 100%;
@@ -196,12 +201,15 @@
     width: 84%;
     border-radius: 50px;
 }    
-    
-@media screen and (min-width: 850px){
+
+@media screen and (min-width: 800px){
 
     .wrapper{
         width: 100%;
         height: 100vh;
+    }
+    .wrapper .header{
+        opacity: 1;
     }
     .wrapper .container-cards{
 
@@ -210,6 +218,5 @@
     }
     .wrapper .container-cards .card{
         max-width: 220px;
-
     }
 }
