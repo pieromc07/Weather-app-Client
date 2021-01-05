@@ -9,6 +9,10 @@ import { CoverPageComponent } from './components/cover-page/cover-page.component
 import { ContentComponent } from './components/content/content.component';
 import { SearchComponent } from './components/search/search.component';
 
+/**   Service */
+import {WeatherService} from './services/weather.service';
+
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -21,7 +25,9 @@ import { SearchComponent } from './components/search/search.component';
 		HttpClientModule,
 		FormsModule
 	],
-	providers: [],
+	providers: [
+		WeatherService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
