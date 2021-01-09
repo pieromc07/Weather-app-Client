@@ -5,49 +5,49 @@
     </div>
     <div class="container-cards">
         <div class="card">
-            <p class="title">Tomorrow</p>
+            <p class="title">{{weather.data[1].date}}</p>
             <div class="weather-img">
-                <img src="https://openweathermap.org/img/wn/11d@2x.png" alt="weather">
+                <img src="{{weather.data[1].icon}}" alt="weather">
             </div>
             <div class="temperatures">
-                <p class="">16°C</p>
-                <p class="">11°C</p>
+                <p class="">{{weather.data[1].temp_max}}°C</p>
+                <p class="">{{weather.data[1].temp_min}}°C</p>
             </div>
 
         </div>
 
         <div class="card">
-            <p class="title">Tomorrow</p>
+            <p class="title">{{weather.data[2].date}}</p>
             <div class="weather-img">
-                <img src="assets/img/Thunderstorm.png" alt="weather">
+                <img src="{{weather.data[2].icon}}" alt="weather">
             </div>
             <div class="temperatures">
-                <p class="">16°C</p>
-                <p class="">11°C</p>
+                <p class="">{{weather.data[2].temp_max}}°C</p>
+                <p class="">{{weather.data[2].temp_min}}°C</p>
             </div>
 
         </div>
 
         <div class="card">
-            <p class="title">Tomorrow</p>
+            <p class="title">{{weather.data[3].date}}</p>
             <div class="weather-img">
-                <img src="assets/img/Thunderstorm.png" alt="weather">
+                <img src="{{weather.data[3].icon}}" alt="weather">
             </div>
             <div class="temperatures">
-                <p class="">16°C</p>
-                <p class="">11°C</p>
+                <p class="">{{weather.data[3].temp_max}}°C</p>
+                <p class="">{{weather.data[3].temp_min}}°C</p>
             </div>
 
         </div>
 
         <div class="card">
-            <p class="title">Tomorrow</p>
+            <p class="title">{{weather.data[4].date}}</p>
             <div class="weather-img">
-                <img src="assets/img/Thunderstorm.png" alt="weather">
+                <img src="{{weather.data[4].icon}}" alt="weather">
             </div>
             <div class="temperatures">
-                <p class="">16°C</p>
-                <p class="">11°C</p>
+                <p class="">{{weather.data[4].temp_max}}°C</p>
+                <p class="">{{weather.data[4].temp_min}}°C</p>
             </div>
 
         </div>
@@ -62,7 +62,7 @@
                     <p>Wind status</p>
                 </div>
                 <div class="body">
-                    <p>7<span>mph</span></p>
+                    <p>{{weather.data[0].windSeed}}<span>mph</span></p>
                 </div>
 
                 <div class="footer">
@@ -74,7 +74,7 @@
                     <p>Humidity</p>
                 </div>
                 <div class="body">
-                    <p>84<span>%</span></p>
+                    <p>{{weather.data[0].humidity}}<span>%</span></p>
                 </div>
 
                 <div class="footer">
@@ -97,7 +97,7 @@
                     <p>Visibility</p>
                 </div>
                 <div class="body">
-                    <p>6,4<span>miles</span></p>
+                    <p>{{weather.data[0].visibility}}<span>miles</span></p>
                 </div>
 
                 <div class="footer">
@@ -109,7 +109,7 @@
                     <p>Air Pressure</p>
                 </div>
                 <div class="body">
-                    <p>998<span>mb</span></p>
+                    <p>{{weather.data[0].pressure}}<span>mb</span></p>
                 </div>
 
                 <div class="footer">

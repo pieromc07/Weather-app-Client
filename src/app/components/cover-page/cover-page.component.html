@@ -4,7 +4,8 @@
     <div id="search-content" class="search-content">
         <div class="close"><i (click)="exit()" class="fas fa-times"></i></div>
         <form action="" class="form-search">
-            <input type="text" name="location" id="location" [(ngModel)]="searchLocation.location" placeholder="search for location">
+            <input type="text" name="location" id="location" [(ngModel)]="searchLocation.location"
+                placeholder="search for location">
             <button id="search" (click)="search()">Search</button>
         </form>
 
@@ -22,8 +23,8 @@
 
     <div class="header">
         <button type="button" class="search" (click)="open()">Search for place</button>
-        <button type="button" class="location" (click)="geolocation()">
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+        <button type="button" id="locationBtn" class="location" (click)="geolocation()">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="2em"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z">
@@ -32,13 +33,15 @@
         </button>
     </div>
 
-    <div class="background-cloud"><img src= "assets/img/Cloud-background.png" alt=""></div>
+    <div class="background-cloud"><img src="assets/img/Cloud-background.png" alt=""></div>
     <div class="outstanding">
-        <div class="weather"><img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></div>
-        <h1 class="temperature">15<span class="centigrade">°C</span></h1>
-        <p class="status-weather">Shower</p>
-        <p class="date"> <span>Today</span><span>.</span><span>wed, 2 Dec</span> </p>
-        <p class="map"><i class="fas fa-map-marker-alt"></i> <span>Pacasmayo</span> </p>
+        <div class="weather"*ngIf="ImgWeather">
+            <img src="{{weather.data[0].icon}}" alt="Imagen">
+        </div>
+        <h1 class="temperature">{{weather.data[0].temp}}<span class="centigrade">°C</span></h1>
+        <p class="status-weather">{{weather.data[0].weatherMain.description}}</p>
+        <p class="date"> <span>Today</span><span>.</span><span>{{weather.data[0].date}}</span> </p>
+        <p class="map"><i class="fas fa-map-marker-alt"></i> <span>{{weather.cityName}}</span> </p>
     </div>
 
     <!-- <button type="button" style="height: 50px; width: 130px;" (click)="search()"> click</button> -->

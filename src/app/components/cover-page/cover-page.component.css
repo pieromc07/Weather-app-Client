@@ -29,33 +29,51 @@
     align-items: center;
     width: 100%;
     height: 10%;
-    padding: 12px 15px;
-    
+    padding: 10px 15px 2px 15px;
 }
 
 .wrapper .header .search{
     text-decoration: none;
     padding: 8px 14px;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
     border-radius: 2px;
     color: #ffffff;
     background-color: #6E707A;
     cursor: pointer;
+    z-index: 9;
    
 }
-
+.wrapper .header .search:hover{
+    background-color: #FFEC65;
+    opacity: .6;
+    color: #1A1D22;
+}
 .wrapper .header .location{
     cursor: pointer;
     background: #6E707A;
     color: #ffffff;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border: none;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    transition: all .2s ease-out;
+    z-index: 9;
+}
+.wrapper .header .location:hover{
+
+    background-color: #FFEC65;
+    opacity: .6;
+    color: #1A1D22;
+}
+.click{
+    background-color: #FFEC65  !important;
+    opacity: .6 !important;
+    color: #1A1D22 !important;
 }
 
 .wrapper .outstanding{
@@ -65,8 +83,6 @@
     height: 90%;
 }
 
-.wrapper .outstanding .weather{
-}
 
 .wrapper .outstanding .weather img{
     width: 9em;
@@ -111,14 +127,16 @@
 .wrapper .outstanding .map{
     width: 120px;
     margin: 1em auto 50px auto;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 400;
     color: rgb(160, 159, 177);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
-
+.wrapper .outstanding .map span{
+    font-size: 20px;
+}
 
 .search-content{
     width: 100%;
@@ -129,6 +147,7 @@
     visibility: hidden;
     transition: all ease 1s;
     padding: 20px;
+    z-index: 10;
 }
 .search-content.active{
     visibility: visible;

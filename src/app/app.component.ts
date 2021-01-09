@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {WeatherService} from './services/weather.service'
+import { NgxSpinnerService } from "ngx-spinner";
+// import {CoverPageComponent} from "./components/cover-page/cover-page.component";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,12 +8,20 @@ import {WeatherService} from './services/weather.service'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private weatherService: WeatherService) {
+  constructor(private ngxSpinnerService: NgxSpinnerService) {
     
   }
   ngOnInit(){
-    // this.getWearher()
-
+    
+    // /** spinner starts on init */
+    // this.ngxSpinnerService.show();
+ 
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   // this.coverPage.geolocation()
+    //   console.log("Hola");
+    //   this.ngxSpinnerService.hide();
+    // }, 10000);
   }
 
 }
