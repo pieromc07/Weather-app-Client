@@ -6,9 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class WeatherService {
 
-  _URL = "https://api.openweathermap.org/data/2.5/forecast?"
-  _KEY = "20fba37682e818119926064af3408f0f"
-
+  // _URL = "https://api.openweathermap.org/data/2.5/forecast?"
+  _URL = "http://localhost:5500/api/v1/weather/test"
 
   constructor(
     private httpClient: HttpClient
@@ -18,10 +17,11 @@ export class WeatherService {
    * getForLocation
    */
   public getForLocation(lat: String, lon: String){
-    
-    let newUrl = this._URL + "lat=" + lat + "&lon=" + lon +"&units=metric"+ "&appid="+ this._KEY 
 
-    return this.httpClient.get(newUrl)
+
+
+    return this.httpClient.get
+    // return this.httpClient.post
   }
 
 

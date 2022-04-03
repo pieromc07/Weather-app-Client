@@ -358,7 +358,7 @@ export class CoverPageComponent implements OnInit {
           this.weather.data[3].weatherMain.id = res.list[24].weather[0].id;
           this.weather.data[3].weatherMain.main = res.list[24].weather[0].main;
           this.weather.data[3].weatherMain.description = res.list[24].weather[0].description;
-          //ff 
+          //ff
           this.weather.data[4].temp = res.list[32].main.temp;
           this.weather.data[4].temp_max = res.list[32].main.temp_max;
           this.weather.data[4].temp_min = res.list[32].main.temp_min;
@@ -379,7 +379,7 @@ export class CoverPageComponent implements OnInit {
         });
       button?.classList.remove("click");
       this.bridgedates.DataTigger.emit(this.weather)
-     
+
 
     }
     const err = (err: any) => {

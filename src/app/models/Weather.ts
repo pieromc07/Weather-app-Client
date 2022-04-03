@@ -1,90 +1,40 @@
-export interface Weather{
+export interface Weather {
 
-    cityName: '',
-    cityContry: '',
-    date: '',
-    data: [
-      {
-        temp: 0,
-        temp_min: '',
-        temp_max: '',
-        pressure: '',
-        humidity: '',
-        windSeed: '',
-        windDeg: '',
-        visibility: '',
-        date: '',
-        weatherMain: {
-          id: '',
-          main: '',
-          description: '',
-        }
-      },
-      {
-        temp: '',
-        temp_min: '',
-        temp_max: '',
-        pressure: '',
-        humidity: '',
-        windSeed: '',
-        windDeg: '',
-        visibility: '',
-        date: '',
-        weatherMain: {
-          id: '',
-          main: '',
-          description: '',
-        }
-      },
-      {
-        temp: '',
-        temp_min: '',
-        temp_max: '',
-        pressure: '',
-        humidity: '',
-        windSeed: '',
-        windDeg: '',
-        visibility: '',
-        date: '',
-        weatherMain: {
-          id: '',
-          main: '',
-          description: '',
-        }
-      },
-      {
-        temp: '',
-        temp_min: '',
-        temp_max: '',
-        pressure: '',
-        humidity: '',
-        windSeed: '',
-        windDeg: '',
-        visibility: '',
-        date: '',
-        weatherMain: {
-          id: '',
-          main: '',
-          description: '',
-        }
-      },
-      {
-        temp: '',
-        temp_min: '',
-        temp_max: '',
-        pressure: '',
-        humidity: '',
-        windSeed: '',
-        windDeg: '',
-        visibility: '',
-        date: '',
-        weatherMain: {
-          id: '',
-          main: '',
-          description: '',
-        }
-      },
-    ]
-    
-
-}
+	city: {
+		name: '',
+		country: '',
+		population: 0,
+		coord: {
+			lon: 0,
+			lat: 0
+		}
+	},
+	weather: [
+		{
+			figure: {
+				id: 0,
+				main: '',
+				description: '',
+				icon: '',
+				url: ''
+			},
+			main: {
+				temp: 0,
+				feels_like: 0,
+				temp_min: 0,
+				temp_max: 0,
+				pressure: 0,
+				humidity: 0
+			},
+			wind: {
+				speed: 0,
+				deg: 0,
+				gust: 0
+			},
+			clouds: {
+				all: 0
+			},
+			dt: ''
+		}
+	]
+};

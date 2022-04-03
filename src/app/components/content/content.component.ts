@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BridgedatesService } from './../../services/bridgedates.service';
-import {Weather} from './../../models/Weather'
+import { Weather } from './../../models/Weather'
 
 @Component({
   selector: 'app-content',
@@ -9,7 +9,7 @@ import {Weather} from './../../models/Weather'
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private bridgedates: BridgedatesService) {}
+  constructor(private bridgedates: BridgedatesService) { }
   weather =
     {
       cityName: '',
@@ -31,7 +31,7 @@ export class ContentComponent implements OnInit {
             id: '',
             main: '',
             description: '',
-            
+
           }
         },
         {
@@ -95,7 +95,7 @@ export class ContentComponent implements OnInit {
           windDeg: '',
           visibility: '',
           date: '',
-          icon:'',
+          icon: '',
           weatherMain: {
             id: '',
             main: '',
@@ -107,10 +107,10 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.bridgedates.DataTigger.subscribe((data:any) => {
-      
-     this.weather = data
-     console.log(this.weather);
+    this.bridgedates.DataTigger.subscribe((data: any) => {
+
+      this.weather = data
+      console.log(this.weather);
 
     })
   }
